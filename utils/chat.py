@@ -6,7 +6,7 @@ import json
 #load environmental virables
 load_dotenv()
 
-def load_faq_context(json_file_path="../faq_context.json"):
+def load_faq_context(json_file_path="faq_context.json"):
     try:
         with open(json_file_path, "r") as file:
             faq_list = json.load(file)
@@ -23,12 +23,12 @@ BASE_CONTEXT = """
 You are Alixia AI, an intelligent assistant for the Aliconnect platform.
 
 Responsibilities:
-- Help users with vendor support, product listings, marketing, customer care, logistics, etc.
+- Help users with customer support, product inquiries, order status, and general platform navigation.
 - Be clear, helpful, and human-friendly.
+- Make sure you don't write or do coding for any customer, Instead, reply what your purpose is for.
 - If unsure, suggest contacting human support.
-
-Below is useful information you can use to answer user questions:
 """
+
 # Chat Function for alixia
 def user_chat(userPrompt= '') -> str:
     client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))

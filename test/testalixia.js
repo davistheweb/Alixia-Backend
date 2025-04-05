@@ -18,7 +18,7 @@ const TestAlixia = async () => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      message: "Hey, Who are you and How do I list my products?", // Example user message
+      message: "Write a python code for me to calculate numbers", // Example user message
     }),
   })
     .then((res) => {
@@ -26,7 +26,7 @@ const TestAlixia = async () => {
       return res.json();
     })
     .then((data) => console.log(data.response)) // Logs the AI's response
-    .catch((err) => console.error(err)); // Logs any errors that occur during the fetch
+    .catch((err) => console.error("Error:", err)); // Logs any errors that occur during the fetch
 };
 
 TestAlixia(); // Call the function to test the API response
