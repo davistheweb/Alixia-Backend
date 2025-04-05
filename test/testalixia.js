@@ -1,4 +1,4 @@
-// This function sends a POST request to the backend (Flask server) at http://127.0.0.1:5000/chat
+// This function sends a POST request to the backend (Flask server) at https://alixia-backend.vercel.app/chat
 // with a user message in the request body. It expects a JSON response containing the AI's reply.
 //
 // The process is as follows:
@@ -12,7 +12,7 @@
 // 5. If there is any error during the fetch request or response processing, the error is logged to the console.
 
 const TestAlixia = async () => {
-  fetch("http://127.0.0.1:5000/chat", {
+  fetch("https://alixia-backend.vercel.app/chat", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
