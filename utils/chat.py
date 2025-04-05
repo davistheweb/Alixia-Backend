@@ -6,16 +6,17 @@ import json
 #load environmental virables
 load_dotenv()
 
-def load_faq_context(json_file_path  = "faq_context.json"):
-    with open(json_file_path, "r") as file:
-        faq_list = json.load(file)
-
-        #Convert to readable string for the prompt 
-
-        faq_context = "\n".join(
-            [f"Q: {item['question']} \nA: {item['answer']}" for item in faq_list]
-        )
-        return faq_context
+def load_faq_context(json_file_path="../faq_context.json"):
+    try:
+        with open(json_file_path, "r") as file:
+            faq_list = json.load(file)
+            faq_context = "\n".join(
+                [f"Q: {item['question']} \nA: {item['answer']}" for item in faq_list]
+            )
+            return faq_context
+    except Exception as e:
+        print(f"Error loading FAQ context: {e}")
+        return ""
     
 #Base context for Alixia identity(INFORMATION)
 BASE_CONTEXT = """
@@ -35,7 +36,8 @@ def user_chat(userPrompt= '') -> str:
     #load faq context to merge it with base
 
     faq_context = load_faq_context()
-    full_prompt = f"{BASE_CONTEXT}\n\nUser: {userPrompt}\nAlixia:"
+    full_prompt = f"{BASE_CONTEXT}\n{faq_context}\n\nUser: {userPrompt}\nAlixia:"
+
 
     #Pass full user prompt to gemini ai
     response = client.models.generate_content(
@@ -44,7 +46,7 @@ def user_chat(userPrompt= '') -> str:
     return response.text
 
 
-print(user_chat("What is aliconnect all about?"))
+#print(user_chat("How do i create an account"))
 
 #userInput = input("Enter your message: ")
 
