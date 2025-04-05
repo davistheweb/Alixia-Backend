@@ -18,7 +18,8 @@ const TestAlixia = async () => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      message: "Write a python code for me to calculate numbers", // Example user message
+      message:
+        "Hey, Who are you?, how are you doing?, and What services does Aliconnect offer?", // Example user message
     }),
   })
     .then((res) => {
