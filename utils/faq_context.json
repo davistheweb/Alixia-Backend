@@ -33,7 +33,7 @@
   },
   {
     "question": "How do I contact customer support?",
-    "answer": "You can chat with Alixia AI for quick assistance or reach our support team via email at <a style='color:blue; text-decoration: underline;' href='mailto:ai-support@aliconnect.com'>ai-support@aliconnect.com</a>"
+    "answer": "You can chat with Alixia AI for quick assistance or reach our support team via email at <a href='mailto:support@aliconnect.com' style='color: blue; text-decoration: underline;'>support@aliconnect.com</a>"
   },
   {
     "question": "How do I market my store effectively?",
