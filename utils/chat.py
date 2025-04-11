@@ -49,6 +49,7 @@ def user_chat(userPrompt= '') -> str:
 
 print(user_chat("is this GRAMMER correct? Avoid dirty performance in ur http request "))
 
+#Testing the chat->
 #userInput = input("Enter your message: ")
 
 #chat(userInput)
