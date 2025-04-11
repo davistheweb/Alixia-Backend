@@ -5,7 +5,11 @@
   },
   {
     "question": "How do I sign up on Aliconnect?",
-    "answer": "You can sign up by visiting www.aliconnect.com and clicking on the ‘Sign Up’ button. Follow the prompts to create your account."
+    "answer": "You can sign up by visiting www.aliconnects.com and clicking on the ‘Sign Up’ button. Follow the prompts to create your account."
+  },
+  {
+    "question": "How do I login to Aliconnect?",
+    "answer": "You can login by visiting www.aliconnects.com and clicking on the ‘login’ button. Follow the prompts to login to your account."
   },
   {
     "question": "What services does Aliconnect offer?",

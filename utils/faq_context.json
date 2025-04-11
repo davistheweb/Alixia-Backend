@@ -5,7 +5,11 @@
   },
   {
     "question": "How do I sign up on Aliconnect?",
-    "answer": "You can sign up by visiting www.aliconnect.com and clicking on the ‘Sign Up’ button. Follow the prompts to create your account."
+    "answer": "You can sign up by visiting www.aliconnects.com and clicking on the ‘Sign Up’ button. Follow the prompts to create your account."
+  },
+  {
+    "question": "How do I login to Aliconnect?",
+    "answer": "You can login by visiting www.aliconnects.com and clicking on the ‘login’ button. Follow the prompts to login to your account."
   },
   {
     "question": "What services does Aliconnect offer?",
@@ -33,7 +37,7 @@
   },
   {
     "question": "How do I contact customer support?",
-    "answer": "You can chat with Alixia AI for quick assistance or reach our support team via email at <a href='mailto:support@aliconnect.com' style='color: blue; text-decoration: underline;'>support@aliconnect.com</a>"
+    "answer": "You can chat with Alixia AI for quick assistance or reach our support team via email at support@aliconnect.com."
   },
   {
     "question": "How do I market my store effectively?",
