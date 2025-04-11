@@ -19,7 +19,7 @@ const TestAlixia = async () => {
     },
     body: JSON.stringify({
       message:
-        "can you write a python code for me to print hello world, // Example user message
+        "can you write a python code for me to print hello world, // Example user message"
     }),
   })
     .then((res) => {
