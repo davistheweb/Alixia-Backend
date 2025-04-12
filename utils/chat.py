@@ -19,13 +19,13 @@ def load_faq_context(json_file_path="faq_context.json"):
         print(f"Error loading FAQ context: {e}")
         return ""
     
-def load_products():
+""" def load_products():
     aliconnects_store_url = os.getenv("ALICONNECT_STORE_URL")
     response = requests.get(aliconnects_store_url)
     soup = BeautifulSoup(response.text, "html.paser")
     tags = soup.findAll("img, h2, p, a", limit=100)
     for tag in tags:
-        print(tag.text)
+        print(tag.text) """
    
 #Base context for Alixia identity(INFORMATION)
 BASE_CONTEXT = """
