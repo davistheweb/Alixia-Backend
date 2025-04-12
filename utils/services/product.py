@@ -1,9 +1,5 @@
-import os
 import requests
 from bs4 import BeautifulSoup
-from dotenv import load_dotenv
-
-load_dotenv()
 
 def load_products(user_search):
     aliconnects_store_url = f"https://store.aliconnects.com/?product_cat=0&s={user_search}&post_type=product"

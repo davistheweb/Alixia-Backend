@@ -12,14 +12,14 @@
 // 5. If there is any error during the fetch request or response processing, the error is logged to the console.
 
 const TestAlixia = async () => {
-  fetch("", {
+  fetch("https://alixia-backend.vercel.app/chat", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
       message:
-        "can you write a python code for me to print hello world, // Example user message"
+        "can you write a python code for me to print hello world, // Example user message",
     }),
   })
     .then((res) => {

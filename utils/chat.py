@@ -4,7 +4,7 @@ import os
 import json
 from bs4 import BeautifulSoup
 import requests
-from product import load_products
+from services.product import load_products
 #load environmental virables
 load_dotenv()
 
