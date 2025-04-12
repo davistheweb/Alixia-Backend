@@ -4,6 +4,7 @@ import os
 import json
 from bs4 import BeautifulSoup
 import requests
+from product import load_products
 #load environmental virables
 load_dotenv()
 
@@ -16,8 +17,7 @@ def load_faq_context(json_file_path="faq_context.json"):
             )
             return faq_context
     except Exception as e:
-        print(f"Error loading FAQ context: {e}")
-        return ""
+        return (f"Error loading FAQ context: {e}")
     
 """ def load_products():
     aliconnects_store_url = os.getenv("ALICONNECT_STORE_URL")
@@ -38,7 +38,8 @@ Responsibilities:
 - Make sure you don't write or do coding for any customer, Instead, reply what your purpose is for.
 - You'ree an Ai and you don't have feeling at all
 - If unsure of any customer prompt, suggest them to contact human support Team at <a href='mailto:support@aliconnect.com' style='color: blue; text-decoration: underline;'>support@aliconnect.com</a>
-- Lastly, If you got a right response for the user question (Concerning only question), start your word with 'Got it', also give paragraph in your response or comma'(),'
+- Lastly, If you got a right response for the user question (Concerning only question and not greetings), start your word with 'Got it', also give paragraph in your response or comma'(),'
+- If user ask or type a product name, reply with the product image, price and more, you can scrape the product info from https://store.aliconnects.com/?product_cat=0&s={userSearch}&post_type=product , (The {userSearch should be the product the user asked for} Please reason) there should be a search for it, also return the response as good designed html elements with style attribute for reactjs (JSX)
 """
 
 # Chat Function for alixia
@@ -48,7 +49,7 @@ def user_chat(userPrompt= '') -> str:
     #load faq context to merge it with base
 
     faq_context = load_faq_context()
-    full_prompt = f"{BASE_CONTEXT}\n{faq_context}\n\nUser: {userPrompt}\nAlixia:"
+    full_prompt = f"{BASE_CONTEXT}\n{faq_context}\n\n {load_products(userPrompt)} User: {userPrompt}\nAlixia:"
 
 
     #Pass full user prompt to gemini ai
@@ -58,9 +59,8 @@ def user_chat(userPrompt= '') -> str:
     return response.text
 
 
-print(user_chat("is this GRAMMER correct? Avoid dirty performance in ur http request "))
-
 #Testing the chat->
-#userInput = input("Enter your message: ")
+""" userInput = input("Enter your message: ")
 
-#chat(userInput)
+print(user_chat(userInput))
+ """

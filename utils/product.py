@@ -5,8 +5,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-def load_products():
-    aliconnects_store_url = os.getenv("ALICONNECT_STORE_URL")
+def load_products(user_search):
+    aliconnects_store_url = f"https://store.aliconnects.com/?product_cat=0&s={user_search}&post_type=product"
     response = requests.get(aliconnects_store_url)
     
     if response.status_code != 200:
@@ -36,12 +36,10 @@ def load_products():
 
     # Render each product like a frontend div
     for p in products:
-        print(f"""
+        return (f"""
 <div class="product">
   <img src="{p['img']}" alt="{p['name']}" />
   <h2>{p['name']}</h2>
   <p>{p['price']}</p>
 </div>
 """)
-
-load_products()
