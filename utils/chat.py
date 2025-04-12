@@ -60,7 +60,6 @@ def user_chat(userPrompt= '') -> str:
 
 
 #Testing the chat->
-""" userInput = input("Enter your message: ")
+userInput = input("Enter your message: ")
 
 print(user_chat(userInput))
- """
