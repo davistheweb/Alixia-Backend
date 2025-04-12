@@ -4,7 +4,7 @@ import os
 import json
 from bs4 import BeautifulSoup
 import requests
-from services.product import load_products
+from utils.services.product import load_products
 #load environmental virables
 load_dotenv()
 
@@ -60,6 +60,7 @@ def user_chat(userPrompt= '') -> str:
 
 
 #Testing the chat->
-userInput = input("Enter your message: ")
+""" userInput = input("Enter your message: ")
 
 print(user_chat(userInput))
+ """
