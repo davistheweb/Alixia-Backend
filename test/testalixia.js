@@ -17,7 +17,7 @@ const TestAlixia = async () => {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ message: "I need a shoe" }),
+    body: JSON.stringify({ message: "." }),
   })
     .then((res) => {
       if (!res.ok) throw new Error("Failed to get response");
