@@ -1,4 +1,4 @@
-// This function sends a POST request to the backend (Flask server) at https://alixia-backend.vercel.app/chat
+// This function sends a POST request to the backend (Flask server) at http://127.0.0.1:5000/chat
 // with a user message in the request body. It expects a JSON response containing the AI's reply.
 //
 // The process is as follows:
