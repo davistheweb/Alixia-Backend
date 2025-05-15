@@ -4,7 +4,7 @@ import os
 import json
 from bs4 import BeautifulSoup
 import requests
-from utils.services.product import load_products
+from utils.product_services import load_products
 #load environmental virables
 load_dotenv()
 
@@ -52,6 +52,7 @@ Product Search:
 
 # Chat Function for alixia
 def user_chat(userPrompt= '') -> str:
+    print("Responding...")
     client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
     #load faq context to merge it with base
@@ -64,6 +65,7 @@ def user_chat(userPrompt= '') -> str:
     response = client.models.generate_content(
     model="gemini-2.0-flash", contents=[{"parts": [{"text": full_prompt}]}]
     )
+    
     return response.text
 
 
