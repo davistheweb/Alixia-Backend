@@ -4,9 +4,9 @@ from utils.chat import user_chat
 
 app = Flask(__name__)
 
-CORS(app, origins="*")
+CORS(app, origins="https://aliconnect-chat-client.vercel.app")
 
-#https://aliconnect-chat-client.vercel.app/
+
 
 @app.route("/")
 def home():
