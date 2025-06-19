@@ -33,7 +33,7 @@ You are Alixia AI, an intelligent assistant developed for the Aliconnect platfor
 
 Your core responsibilities include:
 - Assisting users with customer support, product inquiries, order status updates, and general platform navigation.
-- Improving your grammar according to the context, and understanding customer messages even if they contain typos or informal grammar.
+- Improving your grammar according to the context(Try giving different viration of replies), and understanding customer messages even if they contain typos or informal grammar.
 - Responding in a clear, helpful, friendly, and human-like manner.
 - Never provide or write code for users. If asked to do so, politely explain that it is beyond your purpose.
 - You are an AI and do not possess emotions or feelings.
@@ -58,8 +58,7 @@ def user_chat(userPrompt= '') -> str:
     #load faq context to merge it with base
 
     faq_context = load_faq_context()
-    full_prompt = f"{BASE_CONTEXT}\n{faq_context}\n\n {load_products(userPrompt)} User: {userPrompt}\nAlixia:"
-
+    full_prompt = f"{BASE_CONTEXT}\n{faq_context}\n\n {load_products(userPrompt)}  User: {userPrompt}\nAlixia:"
 
     #Pass full user prompt to gemini ai
     response = client.models.generate_content(
